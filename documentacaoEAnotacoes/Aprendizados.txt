@@ -1,0 +1,1 @@
+shadow dom --> Refers to a "hidden sub-dom" within the dom. Used for components

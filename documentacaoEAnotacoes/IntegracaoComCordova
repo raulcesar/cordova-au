@@ -1,2 +1,0 @@
-aurelia cli uses './aurelia_project/tasks/build.js' to build project. Alter to copy to ../www (of cordova project);
-use cordova prepare to setup platforms and plugins.

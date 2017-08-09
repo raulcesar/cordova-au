@@ -1,0 +1,13 @@
+<template>
+    <require from="greeter.css" as="scoped"></require>
+    <require from="togglecase"></require>
+    <form >
+        First Name: <input type="text" value.bind="firstName | toggleCase">
+        Last Name: <input type="text" value.bind="lastName">
+        
+    </form>
+    <div class.bind="classes" textcontent.one-way="greeting"></div>
+
+    <ons-button click.trigger="update()">Click me!</ons-button>
+
+</template>
