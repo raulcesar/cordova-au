@@ -139,7 +139,13 @@
             "name": "onsenui",
             "main": "js/onsenui.js",
             "path": "../node_modules/onsenui"
+          }, {
+            "name": "lodash",
+            "path": "../node_modules/lodash",
+            "main": "lodash.min"
+              
           }
+
         ]
       }
     ]

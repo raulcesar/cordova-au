@@ -1,3 +1,6 @@
 1) - Routing
 2) - Test in app browser
 3) - Understand better imports
+4) - Use sass (or less)
+5) - Implement karma tests
+6) - Implement e2e tests (protractor maybe)
