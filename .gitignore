@@ -1,0 +1,14 @@
+.DS_STORE
+Thumbs.db
+.idea
+.vscode
+
+node_modules/
+
+
+# Corodva... run cordova prepare to generate based on "config.xml"
+platforms/
+plugins/
+
+# Because I generate ./www from aureliaView project, we can ignore that too.
+www/
