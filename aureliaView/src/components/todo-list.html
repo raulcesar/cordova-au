@@ -1,0 +1,9 @@
+<template>
+     <require from="./todo-list.css" as="scoped"></require> 
+    <ul>
+        <li repeat.for="t of todos">
+            <input type="checkbox" checked.bind="t.completed">
+            <span class.bind="t.completed ? 'strikeout': ''">${t.id} - ${t.title}</span>
+        </li>
+    </ul>
+</template>

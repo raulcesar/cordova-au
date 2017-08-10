@@ -1,1 +1,2 @@
-shadow dom --> Refers to a "hidden sub-dom" within the dom. Used for components
+- shadow dom --> Refers to a "hidden sub-dom" within the dom. Used for components
+- Component names in template should become slurified all lowers. Ex: TodoList --> <todo-list>
