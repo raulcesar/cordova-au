@@ -1,0 +1,12 @@
+- shadow dom --> Refers to a "hidden sub-dom" within the dom. Used for components
+- Component names in template should become slurified all lowers. Ex: TodoList --> <todo-list>
+
+- Remote debuging cordova app on android with chrome:
+    https://software.intel.com/en-us/xdk/docs/using-remote-chrome-devtools-to-debug-android-cordova-apps
+
+- Workaround for debuging source maps on cordova: 
+  1 - Transcode app-bundle.js.map into base64 string.
+  2 - in app-bundle.js, instead of having last "sourceMappingURL" point to file, have it point to the base64 string, like so:
+  sourceMappingURL=data:application/json;charset=utf8;base64,...encoded string...
+
+  
