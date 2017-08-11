@@ -4,3 +4,4 @@
 4) - Use sass (or less)
 5) - Implement karma tests
 6) - Implement e2e tests (protractor maybe)
+7) - Incorporate "ghomma" of source maps into build process

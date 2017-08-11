@@ -1,1 +1,3 @@
-WTF happened to promises in section 2 lecture 1 (modules and promises)
+1) - WTF happened to promises in section 2 lecture 1 (modules and promises) (-1)
+2) - So far have not seen how components comunicate with each other...
+3) - No downloadable material. (-1)

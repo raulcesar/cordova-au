@@ -23,7 +23,6 @@ function buildJavaScript() {
     .pipe(changedInPlace({firstPass: true}))
     .pipe(sourcemaps.init())
     .pipe(babel(project.transpiler.options))
-    .pipe(sourcemaps.write())
     .pipe(build.bundle());
 }
 
