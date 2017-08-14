@@ -1,18 +1,18 @@
 import environment from './environment';
 
 export function configure(aurelia) {
-  aurelia.use
-    .standardConfiguration()
-    .feature('resources')
-    .plugin('aurelia-onsenui');
+    aurelia.use
+        .standardConfiguration()
+        .feature('resources')
+        .plugin('aurelia-onsenui');
 
-  if (environment.debug) {
-    aurelia.use.developmentLogging();
-  }
+    if (environment.debug) {
+        aurelia.use.developmentLogging();
+    }
 
-  if (environment.testing) {
-    aurelia.use.plugin('aurelia-testing');
-  }
+    if (environment.testing) {
+        aurelia.use.plugin('aurelia-testing');
+    }
 
-  aurelia.start().then(() => aurelia.setRoot());
+    aurelia.start().then(() => aurelia.setRoot('./components/shell'));
 }

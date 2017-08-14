@@ -1,0 +1,11 @@
+<template>
+    <require from="../resources/elements/todo-add"></require>
+    <require from="../resources/elements/todo-filter"></require>
+    <require from="../resources/elements/todo-list"></require>
+
+    <todo-add todo-title.bind="todoTitle" todo-completed.bind="todoCompleted" add-callback.call='addTodo($event)'  ></todo-add>
+    
+    
+    <todo-filter filter-string.bind="filterText"  ></todo-filter>
+    <todo-list todos.bind="todos" remove-callback.call='removeTodo($event)' update-callback.call='updateTodo($event)' ></todo-list>
+</template>

@@ -1,0 +1,5 @@
+1) - Todo item
+2) - Todo Add OK.
+3) - Todo Filter (with text search)
+4) - Todo action (Reme all, toggle all, etc.)
+5) - Tdodo List

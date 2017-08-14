@@ -1,0 +1,12 @@
+<template>
+    <require from="./todo-item.css" as="scoped"></require>
+    <li>
+        <input type="checkbox" checked.bind="todo.completed">
+        <input ref="titleInput" type="text" if.bind="todo.editMode" value.bind="todo.title">
+        <ons-button if.bind="todo.editMode" click.delegate="updateCallback(todo)">update</ons-button>
+
+
+        <span if.bind="!todo.editMode" class.bind="todo.completed ? 'strikeout' : ''" click.delegate="makeUpdatable(todo)">${todo.id} - ${todo.title}</span>
+        <ons-button click.delegate="removeCallback(todo)">Remove</ons-button>
+    </li>
+</template>

@@ -1,6 +1,15 @@
 <template>
-  <!-- <require from="greeter"></require> -->
-  <!-- <greeter></greeter> -->
-    <require from="./components/todo-list"></require>  
+    <!-- <require from="greeter"></require> -->
+    <!-- <greeter></greeter> -->
+    <require from="./resources/attributes/auto-focus"></require>
+        
+    <form submit.trigger="addTodo()">
+        <input type="text" placeholder="Todo" value.bind="observation" >
+        <input type="text" placeholder="Todo" value.bind="newTodoTitle" auto-focus>
+        <button type="submit">Add</button>
+    </form>
+
+
+    <require from="./components/todo-list"></require>
     <todo-list></todo-list>
 </template>

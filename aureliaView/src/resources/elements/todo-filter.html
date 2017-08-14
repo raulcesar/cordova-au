@@ -1,0 +1,5 @@
+<template>
+    <require from="../attributes/keyup-escape"></require>
+    
+    <input type="text" placeholder="Filter" value.bind="filterString" keyup-escape.call="limpaFiltro()">
+</template>

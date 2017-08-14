@@ -3,8 +3,13 @@
 
 export class App {
     // constructor() {
-    //     this.todos = _.times(10, (i) => new Todo(`Task ${i}`));
+    //     // this.todos = _.times(10, (i) => new Todo(`Task ${i}`));
     //     this.message = 'Hello World!';
-    //     console.log(JSON.stringify(this.todos));
+    //     // console.log(JSON.stringify(this.todos));
     // }
+
+
+    addTodo() {
+        console.log('Added todo');
+    }
 }
