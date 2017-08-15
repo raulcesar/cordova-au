@@ -21,8 +21,8 @@ let build = gulp.series(
         prepareMaterialize,
         copyFiles
     ),
-    writeBundles,
-    copyToCordova
+    writeBundles
+    // copyToCordova
 );
 
 let main;

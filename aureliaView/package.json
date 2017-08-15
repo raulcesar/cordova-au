@@ -13,6 +13,7 @@
     "aurelia-materialize-bridge": "^0.30.0",
     "aurelia-onsenui": "^0.2.4",
     "bluebird": "^3.4.1",
+    "firebase": "^4.2.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",

@@ -124,7 +124,12 @@
                     {
                         "name": "pouchdb",
                         "path": "../node_modules/pouchdb/dist",
-                        "main": "pouchdb.min.js"
+                        "main": "pouchdb.min"
+                    },
+                    {
+                        "name": "firebase",
+                        "path": "../node_modules/firebase",
+                        "main": "firebase"
                     },
 
                     {

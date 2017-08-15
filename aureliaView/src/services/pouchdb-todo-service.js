@@ -1,15 +1,31 @@
 import _ from 'lodash';
 import { Todo } from '../models/todo';
 import PouchDB from 'pouchdb';
+import 'firebase';
+
 
 
 export class PouchDBTodoService {
     constructor() {
+        // new PouchDB('mydb').destroy().then(function () {
+        //     // database destroyed
+        //   }).catch(function (err) {
+        //     // error occurred
+        //   })        
         this.db = new PouchDB('todos-db', { adapter: 'websql' });
         this.todos = [];
         this.latency = 100;
         this.isRequesting = false;
         this.todos = _.times(10, (i) => new Todo(`Task ${i}`));
+        this.database = firebase.database();
+    }
+
+    destroyDB() {
+        this.db.destroy().then(() => {
+            console.log('destroed');
+            this.db = new PouchDB('todos-db', { adapter: 'websql' });
+            this.getAllTodos();
+        });
     }
 
     getAllTodos() {
@@ -52,6 +68,8 @@ export class PouchDBTodoService {
             let instance = JSON.parse(JSON.stringify(todo));
             this.db.put(instance).then(response => {
                 this.isRequesting = false;
+                let ref = `todos/${response.id}`;
+                this.database.ref(ref).set(instance);
                 this.todos.push(instance);
                 resolve(instance);
             }).catch(err => {

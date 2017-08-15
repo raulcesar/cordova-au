@@ -1,6 +1,7 @@
 // import { InMemoryTodoService } from '../services/inmemory-todo-service';
 import { PouchDBTodoService } from '../services/pouchdb-todo-service';
 import { Todo } from '../models/todo';
+import firebase from 'firebase';
 
 export class Shell {
     constructor() {
@@ -8,6 +9,10 @@ export class Shell {
         this.todoService = new PouchDBTodoService();
         this.filterText = '';
         this.todoService.getAllTodos();
+    }
+
+    destroyDB() {
+        this.todoService.destroyDB();
     }
 
     addTodo(value) {

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col m8 offset-m2">
-                <h2 class="center-align">Todo List</h2>
+                <h2 class="center-align" click.delegate="destroyDB()">Todo List</h2>
 
                 <todo-add todo-title.bind="todoTitle" todo-completed.bind="todoCompleted" add-callback.call='addTodo($event)'></todo-add>
 
