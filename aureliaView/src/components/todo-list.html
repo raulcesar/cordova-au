@@ -4,7 +4,7 @@
         <li repeat.for="t of todos">
             <input type="checkbox" checked.bind="t.completed">
             <span class.bind="t.completed ? 'strikeout': ''">${t.id} - ${t.title}</span>
-            <ons-button click.trigger="removeTodo(t)">Delete</ons-button>
+            <button click.trigger="removeTodo(t)">Delete</button>
         </li>
     </ul>
 </template>

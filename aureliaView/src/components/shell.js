@@ -12,6 +12,7 @@ export class Shell {
     addTodo(value) {
         let todo = new Todo(value.title, value.completed);
         this.todoService.addTodo(todo);
+        this.todoTitle = '';
     }
 
     removeTodo(value) {

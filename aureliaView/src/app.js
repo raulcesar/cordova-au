@@ -8,6 +8,8 @@ export class App {
     //     // console.log(JSON.stringify(this.todos));
     // }
 
+    firstButtonEnabled = true;
+    firstButtonRaised = true;
 
     addTodo() {
         console.log('Added todo');

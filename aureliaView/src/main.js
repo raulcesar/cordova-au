@@ -4,7 +4,9 @@ export function configure(aurelia) {
     aurelia.use
         .standardConfiguration()
         .feature('resources')
-        .plugin('aurelia-onsenui');
+        // .plugin('aurelia-onsenui')
+        .plugin('aurelia-materialize-bridge', b => b.useAll());
+
 
     if (environment.debug) {
         aurelia.use.developmentLogging();
@@ -15,4 +17,5 @@ export function configure(aurelia) {
     }
 
     aurelia.start().then(() => aurelia.setRoot('./components/shell'));
+    // aurelia.start().then(() => aurelia.setRoot('app'));
 }
