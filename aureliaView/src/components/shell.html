@@ -12,7 +12,7 @@
 
 
                 <!-- <todo-filter filter-string.bind="filterText"  ></todo-filter> -->
-                <todo-list todos.bind="todos" remove-callback.call='removeTodo($event)' update-callback.call='updateTodo($event)' ></todo-list>
+                <todo-list todos.bind="todoService.todos" remove-callback.call='removeTodo($event)' update-callback.call='updateTodo($event)' ></todo-list>
             </div>
         </div>
 

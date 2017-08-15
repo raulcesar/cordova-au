@@ -1,12 +1,13 @@
-import { InMemoryTodoService } from '../services/inmemory-todo-service';
+// import { InMemoryTodoService } from '../services/inmemory-todo-service';
+import { PouchDBTodoService } from '../services/pouchdb-todo-service';
 import { Todo } from '../models/todo';
 
 export class Shell {
     constructor() {
         console.log('hello');
-        this.todoService = new InMemoryTodoService();
+        this.todoService = new PouchDBTodoService();
         this.filterText = '';
-        this.todos = this.todoService.getAllTodos();
+        this.todoService.getAllTodos();
     }
 
     addTodo(value) {
@@ -18,11 +19,11 @@ export class Shell {
     removeTodo(value) {
         console.log(`value.id: ${value.id}`);
         this.todoService.deleteTodoById(value.id);
-        this.todos = this.todoService.getAllTodos();
+        // this.todos = this.todoService.getAllTodos();
     }
     updateTodo(value) {
         console.log(`updating: ${JSON.stringify(value)}`);
-        this.todoService.updateTodoById(value.id, value);
         value.editMode = false;
+        this.todoService.updateTodoById(value.id, value);
     }
 }

@@ -122,6 +122,12 @@
                     "text",
                     "jquery",
                     {
+                        "name": "pouchdb",
+                        "path": "../node_modules/pouchdb/dist",
+                        "main": "pouchdb.min.js"
+                    },
+
+                    {
                         "name": "aurelia-templating-resources",
                         "path": "../node_modules/aurelia-templating-resources/dist/amd",
                         "main": "aurelia-templating-resources"
@@ -147,6 +153,7 @@
                         "main": "js/onsenui.js",
                         "path": "../node_modules/onsenui"
                     },
+                   
                     {
                         "name": "lodash",
                         "path": "../node_modules/lodash",
