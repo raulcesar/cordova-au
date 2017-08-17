@@ -4,7 +4,7 @@
         <md-checkbox md-checked.bind="todo.completed" change.delegate="updateCallback(todo)"></md-checkbox>
             
         <input ref="titleInput" type="text" if.bind="todo.editMode" value.bind="todo.title">
-        <button if.bind="todo.editMode" click.delegate="updateCallback(todo)">update</button>
+        <button if.bind="todo.editMode" click.delegate="update(todo)">update</button>
 
 
         <span if.bind="!todo.editMode" class.bind="todo.completed ? 'strikeout' : ''" click.delegate="makeUpdatable(todo)">${todo.id} - ${todo.title}</span>

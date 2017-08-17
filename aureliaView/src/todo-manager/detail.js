@@ -1,17 +1,23 @@
-// import { inject, Aurelia } from 'aurelia-framework';
+import { inject } from 'aurelia-framework';
+import { EventAggregator } from 'aurelia-event-aggregator';
+import { TodoUpdated } from '../resources/messages/todo-messages';
+
 import { PouchDBTodoService } from '../services/pouchdb-todo-service';
 
+@inject(EventAggregator)
 export class DetailTodo {
     todo;
 
-    constructor() {
+    constructor(eventAggregator) {
         this.todoService = new PouchDBTodoService();
+        this.eventAggregator = eventAggregator;
     }
 
 
     sendMessage() {
         console.log('send a message');
-
+        this.todo.title += ' Alterado';
+        this.eventAggregator.publish(new TodoUpdated(this.todo));
     }
 
     activate(params, routeConfig) {
