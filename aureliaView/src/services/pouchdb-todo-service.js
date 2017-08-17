@@ -3,8 +3,6 @@ import { Todo } from '../models/todo';
 import PouchDB from 'pouchdb';
 import 'firebase';
 
-
-
 export class PouchDBTodoService {
     constructor() {
         // new PouchDB('mydb').destroy().then(function () {
@@ -50,7 +48,7 @@ export class PouchDBTodoService {
         this.isRequesting = true;
         return new Promise((resolve, reject) => {
             this.db.get(id).then(found => {
-                resolve.apply(JSON.parse(JSON.stringify(found)));
+                resolve(JSON.parse(JSON.stringify(found)));
                 this.isRequesting = false;
             }).catch(err => {
                 this.isRequesting = false;

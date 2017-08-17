@@ -8,6 +8,8 @@
 
 
         <span if.bind="!todo.editMode" class.bind="todo.completed ? 'strikeout' : ''" click.delegate="makeUpdatable(todo)">${todo.id} - ${todo.title}</span>
+
+        <button click.delegate="updateInDetailPage(todo)">Edit</button>
         <button click.delegate="removeCallback(todo)">Remove</button>
     </li>
 </template>

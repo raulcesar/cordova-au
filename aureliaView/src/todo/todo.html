@@ -1,0 +1,17 @@
+<template>
+    <require from='../resources/elements/todo-popup-item'></require>
+    <div class="container">
+        <div class="col m8 offset-m2">
+            <h2 class="center-align">Todo</h2>
+            <todo-popup-item todo.bind="todo" remove-callback.call="remove($event)" update-callback.call="update($event)" cancel-edit-callback.call="cancel($event)">
+
+            </todo-popup-item>
+            <center>
+                <button md-button class="waves-effect waves-light btn" type="button" click.delegate="backToList()">
+                    <i class="material-icons center">compare arrows</i>
+                </button>
+            </center>
+
+        </div>
+    </div>
+</template>

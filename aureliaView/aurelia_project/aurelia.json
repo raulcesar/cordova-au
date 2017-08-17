@@ -46,8 +46,7 @@
         "elements": "resources/elements",
         "attributes": "resources/attributes",
         "valueConverters": "resources/value-converters",
-        "bindingBehaviors": "resources/binding-behaviors",
-        "materialize": "node_modules/materialize-css/dist"
+        "bindingBehaviors": "resources/binding-behaviors"
     },
     "testFramework": {
         "id": "jasmine",
@@ -164,6 +163,7 @@
                         "path": "../node_modules/lodash",
                         "main": "lodash.min"
                     },
+                    
                     {
                         "name": "materialize-css",
                         "path": "../node_modules/materialize-css/dist",

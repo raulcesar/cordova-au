@@ -5,7 +5,7 @@ import merge from 'merge-stream';
 import path from 'path';
 
 export default function prepareMaterialize() {
-    let source = project.paths.materialize;
+    let source = 'node_modules/materialize-css/dist';
     let sourceStyle = path.join(source, 'css');
     let sourceFonts = path.join(source, 'fonts/roboto');
 
