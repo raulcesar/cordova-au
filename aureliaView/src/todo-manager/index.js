@@ -24,7 +24,6 @@ export class Shell {
     activate(params) {
         this.activeFilter = (params.filter) ? params.filter : 'all';
         console.log(this.activeFilter);
-
     }
 
 
