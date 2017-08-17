@@ -8,8 +8,9 @@
 
 
         <span if.bind="!todo.editMode" class.bind="todo.completed ? 'strikeout' : ''" click.delegate="makeUpdatable(todo)">${todo.id} - ${todo.title}</span>
-
+        <a route-href="route: todo-detail-id; params.bind: {id: todo.id}">Detail</a>
         <button click.delegate="updateInDetailPage(todo)">Edit</button>
         <button click.delegate="removeCallback(todo)">Remove</button>
+
     </li>
 </template>

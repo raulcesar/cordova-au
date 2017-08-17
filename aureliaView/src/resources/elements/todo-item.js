@@ -23,7 +23,6 @@ export class TodoItem {
     }
     updateInDetailPage(todo) {
         this.router.navigate(this.router.generate('todo', {id: todo.id}));
-
     }
 
     attached() {

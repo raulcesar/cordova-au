@@ -5,7 +5,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col m8 offset-m2">
+            <div class="col m8 ">
                 <h2 class="center-align" click.delegate="destroyDB()">Todo List</h2>
 
                 <todo-add todo-title.bind="todoTitle" todo-completed.bind="todoCompleted" add-callback.call='addTodo($event)'></todo-add>
@@ -14,6 +14,10 @@
                 <!-- <todo-filter filter-string.bind="filterText"  ></todo-filter> -->
                 <todo-list todos.bind="todoService.todos" remove-callback.call='removeTodo($event)' update-callback.call='updateTodo($event)' ></todo-list>
             </div>
+            <div class="col m4 ">
+                <router-view></router-view>
+            </div>
+                    
         </div>
 
     </div>
